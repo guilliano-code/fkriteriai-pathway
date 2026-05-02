@@ -154,14 +154,30 @@ section.sec{padding:100px 48px}
 
 /* TESTIMONIALS */
 .test-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:60px}
-.tcard{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:40px;position:relative}
-.tcard::before{content:'"';font-family:'Barlow Condensed',sans-serif;font-size:140px;color:rgba(0,212,126,.08);position:absolute;top:-24px;left:20px;line-height:1;pointer-events:none}
-.tstars{display:flex;gap:3px;margin-bottom:18px}
-.tstars span{color:var(--gold);font-size:17px}
+.tcard{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:40px;position:relative;overflow:visible}
+/* quote mark sits on the top-left border edge */
+.tcard::before{
+  content:'"';
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:72px;font-weight:900;line-height:1;
+  color:var(--green);
+  position:absolute;
+  top:-22px;left:28px;
+  background:var(--surface);
+  padding:0 8px;
+  pointer-events:none;
+}
+/* stars */
+.tstars{display:flex;gap:5px;margin-bottom:20px}
+.tstars span{
+  font-size:15px;
+  color:var(--green);
+  filter:drop-shadow(0 0 6px rgba(200,255,0,.5));
+  letter-spacing:1px;
+}
 .thead{font-family:'Barlow Condensed',sans-serif;font-size:30px;font-weight:800;margin-bottom:14px}
 .tquote{color:var(--text2);font-size:15px;line-height:1.8;margin-bottom:24px}
-.tauthor{display:flex;align-items:center;gap:12px}
-.tav{width:48px;height:48px;border-radius:50%;object-fit:cover;border:2px solid var(--border);background:var(--card)}
+.tauthor{display:flex;align-items:center;gap:0}
 .tname{font-weight:700;font-size:15px}
 .trole{font-size:12px;color:var(--text3)}
 
@@ -519,8 +535,6 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:40px 48px
         <div class="thead">"I Feel Better"</div>
         <p class="tquote">"Since joining the residency, my training routine became much clearer. The coaches showed me what to focus on, and I've become more consistent. It's a good environment to improve without distractions."</p>
         <div class="tauthor">
-          <img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/75x6oVRlEkU7gyLcePUE/media/33045d7e-5160-4c8f-998e-672414b11c99.png"
-               alt="Alexandros" class="tav" onerror="this.style.display='none'">
           <div><div class="tname">Alexandros Karakyriakos</div><div class="trole">FK Riteriai Residency Player</div></div>
         </div>
       </div>
@@ -529,8 +543,6 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:40px 48px
         <div class="thead">"I Evolved Into A New Kind Of Player"</div>
         <p class="tquote">"For me, this was a chance to raise my level. The structure and support keep me sharp, and my game has become more stable and professional over the past months."</p>
         <div class="tauthor">
-          <img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/75x6oVRlEkU7gyLcePUE/media/33045d7e-5160-4c8f-998e-672414b11c99.png"
-               alt="Kennedy" class="tav" onerror="this.style.display='none'">
           <div><div class="tname">Kennedy Mensah</div><div class="trole">FK Riteriai Residency Player</div></div>
         </div>
       </div>
