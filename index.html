@@ -384,7 +384,7 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:40px 48px
 <!-- CTA STRIP 1 -->
 <div class="cta-strip">
   <div class="cta-strip-inner">
-    <div class="cta-strip-text">Only 20 spots available.<br><span>Don't miss your chance to join.</span></div>
+    <div class="cta-strip-text">Only <span id="stripSpots">38</span> spots available.<br><span>Don't miss your chance to join.</span></div>
     <a href="#pricing" class="btn-dark">Book A Free Call →</a>
   </div>
 </div>
@@ -655,8 +655,10 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:40px 48px
 
 <script src="spots.js"></script>
 <script>
-// Sync spots counter
-document.getElementById('heroSpots').textContent = window.SPOTS_REMAINING;
+// Sync spots counter across all elements
+const _s = window.SPOTS_REMAINING;
+document.getElementById('heroSpots').textContent = _s;
+document.getElementById('stripSpots').textContent = _s;
 
 // Sticky nav
 const nav = document.getElementById('nav');
