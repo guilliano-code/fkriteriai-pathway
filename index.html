@@ -139,12 +139,9 @@ section.sec{padding:100px 48px}
 /* VIDEOS */
 .vids-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:28px;margin-top:56px}
 .vcard{background:var(--card);border:1px solid var(--border);border-radius:16px;overflow:hidden}
-.vthumb{aspect-ratio:16/9;position:relative;overflow:hidden;background:#000}
-.vthumb img{width:100%;height:100%;object-fit:cover;opacity:.55;transition:opacity var(--t);display:block;background:var(--card)}
-.vcard:hover .vthumb img{opacity:.4}
-.vplay{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:68px;height:68px;background:rgba(0,212,126,.9);border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all var(--t)}
-.vplay:hover{transform:translate(-50%,-50%) scale(1.1);background:var(--green)}
-.vplay::before{content:'';border-left:22px solid #07101e;border-top:13px solid transparent;border-bottom:13px solid transparent;margin-left:5px}
+.vthumb{aspect-ratio:9/16;position:relative;overflow:hidden;background:#000}
+.vthumb video{width:100%;height:100%;object-fit:cover;display:block;opacity:.5;transition:opacity var(--t)}
+.vthumb video.playing{opacity:1}
 .vinfo{padding:24px}
 .vinfo h3{font-weight:700;font-size:17px;margin-bottom:8px}
 .vinfo p{color:var(--text2);font-size:14px;line-height:1.6}
@@ -491,7 +488,7 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:40px 48px
     <div class="vids-grid">
       <div class="vcard fi-">
         <div class="vthumb">
-          <video controls preload="none" poster="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/xCqM6U1K8LMSIlw8htJL/media/691a14c2f93958111e8ca596.jpg" style="width:100%;height:100%;object-fit:cover;display:block">
+          <video controls preload="metadata" style="width:100%;height:100%;object-fit:cover;display:block;opacity:.5" onplay="this.style.opacity=1" onpause="this.style.opacity=.5" onended="this.style.opacity=.5">
             <source src="Brandassets/Debutant%20video.mp4" type="video/mp4">
           </video>
         </div>
@@ -503,7 +500,7 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:40px 48px
       </div>
       <div class="vcard fi- d1">
         <div class="vthumb">
-          <video controls preload="none" poster="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://storage.googleapis.com/msgsndr/xCqM6U1K8LMSIlw8htJL/media/691a1f3bc13b9c5346bf68a9.jpg" style="width:100%;height:100%;object-fit:cover;display:block">
+          <video controls preload="metadata" style="width:100%;height:100%;object-fit:cover;display:block;opacity:.5" onplay="this.style.opacity=1" onpause="this.style.opacity=.5" onended="this.style.opacity=.5">
             <source src="Brandassets/New%20signee%20video.mp4" type="video/mp4">
           </video>
         </div>
