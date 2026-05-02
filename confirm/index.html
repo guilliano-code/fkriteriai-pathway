@@ -148,7 +148,7 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:40px 48px
     <div class="spots-counter-wrap">
       <p class="spots-label-top">Spots Remaining</p>
       <span class="spots-number" id="spotsNumber">20</span>
-      <p class="spots-label-bottom">Out of 20 Total</p>
+      <p class="spots-label-bottom">Out of 38 Total</p>
     </div>
     <p class="spots-sub">Once these spots are filled, applications close for the season. Secure your place now.</p>
     <div class="progress-wrap">
@@ -353,7 +353,7 @@ const io = new IntersectionObserver(entries => {
 document.querySelectorAll('.fi-').forEach(el => io.observe(el));
 
 // Spots counter from shared spots.js
-const total = 20;
+const total = 38;
 const remaining = window.SPOTS_REMAINING;
 const taken = total - remaining;
 
