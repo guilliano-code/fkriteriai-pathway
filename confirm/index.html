@@ -137,8 +137,8 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:40px 48px
 
 <!-- NAV -->
 <nav id="nav">
-  <a href="index.html" class="nav-logo">FK <span>Riteriai</span> Pathway</a>
-  <a href="index.html" class="nav-back">← Back to program</a>
+  <a href="../" class="nav-logo">FK <span>Riteriai</span> Pathway</a>
+  <a href="../" class="nav-back">← Back to program</a>
 </nav>
 
 <!-- SPOTS HERO -->
@@ -330,17 +330,17 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:40px 48px
   <div class="foot-inner">
     <div class="foot-logo">FK <span>Riteriai™</span> Pathway</div>
     <ul class="foot-links">
-      <li><a href="index.html#program">Program</a></li>
-      <li><a href="index.html#success">Success Stories</a></li>
-      <li><a href="index.html#pricing">Pricing</a></li>
-      <li><a href="index.html#faq">FAQ</a></li>
+      <li><a href="../#program">Program</a></li>
+      <li><a href="../#success">Success Stories</a></li>
+      <li><a href="../#pricing">Pricing</a></li>
+      <li><a href="../#faq">FAQ</a></li>
       <li><a href="https://fkriteriaipathway.com/Residency-program" target="_blank">Terms & Conditions</a></li>
     </ul>
     <p class="foot-copy">© 2026 FK Riteriai™ Pathway</p>
   </div>
 </footer>
 
-<script src="spots.js"></script>
+<script src="../spots.js"></script>
 <script>
 // Sticky nav
 const nav = document.getElementById('nav');
@@ -436,7 +436,7 @@ function showSuccess() {
   const name  = encodeURIComponent(firstName + ' ' + lastName);
   const mail  = encodeURIComponent(email);
   setTimeout(() => {
-    window.location.href = `booking.html?name=${name}&email=${mail}`;
+    window.location.href = `../booking/?name=${name}&email=${mail}`;
   }, 800);
 }
 </script>
